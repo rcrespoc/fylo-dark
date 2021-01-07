@@ -1,0 +1,295 @@
+:root{
+  --dark-blue-intro-email: hsl(217, 28%, 15%);
+  --dark-blue-bg: hsl(218, 28%, 13%);
+  --dark-blue-footer-bg: hsl(216, 53%, 9%);
+  --dark-blue-testimonials: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --light-red: hsl(0, 100%, 63%);
+  --white: white;
+}
+html{
+  font-family: 'Raleway',sans-serif;
+}
+/* -------------------- COMPONENTES -------------------- */
+/* -------------------- BOTON -------------------- */
+.btn{
+  display: inline-block;
+  padding: .7rem 4rem;
+  background-color: var(--cyan);
+  border-radius: 50px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+/* -------------------- ESTILOS PROPIOS -------------------- */
+/* -------------------- HEADER -------------------- */
+.header{
+  background-color: var(--dark-blue-testimonials);
+  justify-content: space-between;
+}
+.header-icon{
+  flex-basis: 20%;
+}
+.nav-menu{
+  flex-basis: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-menu > a{
+  color: var(--white);
+  font-size: 4vw;
+}
+@media screen and (min-width: 38rem){
+  .nav-menu > a{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  .nav-menu{
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 68rem){
+  .header-icon{
+    flex-basis: 10%;
+  }
+  .nav-menu{
+    flex-basis: 30%;
+    justify-content: space-evenly;
+  }
+  .nav-menu > a{
+    font-size: 1rem;
+  }
+}
+/* -------------------- HERO SECTION -------------------- */
+.hero-section{
+  position: relative;
+  background-color: var(--dark-blue-testimonials);
+}
+.hero-image{
+  position: relative;
+  z-index:2;
+}
+.curvy{
+  position: absolute;
+  width: 100%;
+  top: 13rem;
+}
+.hero-body > .container{
+  position: relative;
+}
+.hero-body > .container > h3{
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  left: 0;
+}
+.hero-body{
+  background-color: var(--dark-blue-bg);
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 539px){
+  .curvy{
+    top: 15rem;
+  }
+}
+@media screen and (min-width: 38rem){
+  .curvy{
+    top: 18rem;
+  }
+}
+@media screen and (min-width: 51rem){
+  .curvy{
+    top: 15rem;
+  }
+  .hero-image{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-body{
+    background-color: transparent;
+  }
+}
+/* -------------------- MAIN SECTION -------------------- */
+main{
+  background-image: linear-gradient(var(--dark-blue-bg) 0% 95%, var(--dark-blue-footer-bg) 95% 100%);
+}
+
+/* -------------------- ITEMS SECTION -------------------- */
+/* -------------------- ITEM -------------------- */
+.item > img{
+  max-width: 50px;
+}
+@media screen and (min-width: 68rem){
+  .items-section{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+  }
+}
+
+/* -------------------- STAY PRODUCTIVE -------------------- */
+.enlace > a{
+  color: var(--cyan);
+  display: inline-block
+}
+.enlace{
+  border-bottom: thin solid var(--cyan);
+  padding: .3rem 0;
+  display: inline-block;
+}
+@media screen and (min-width: 68rem){
+  .stay-productive{
+    display: flex;
+    align-items: center;
+  }
+  .stay-productive-body{
+    margin-left: 5rem;
+  }
+}
+/* -------------------- TESTIMONIALS -------------------- */
+.testimonials-img > img{
+  max-width: 20px;
+}
+.testimonial{
+  background-color: var(--dark-blue-testimonials);
+}
+.testimonial > p{
+  font-size: .7rem;
+}
+.testimonial-profile > img{
+  width: 35px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 68rem){
+  .testimonials-img > img{
+    max-width: 60px;
+  }
+  .testimonials-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 96rem){
+  .testimonials{
+    width: 80%;
+  }
+}
+/* -------------------- GET EARLY ACCESS -------------------- */
+.get-early-access{
+  background-color: var(--dark-blue-testimonials);
+  border-radius: 10px;
+}
+.get-early-access-body > p{
+  font-size: .8rem;
+}
+.get-early-access-form > input{
+  outline: none;
+  border: none;
+}
+.get-early-access-form > input[type="submit"]{
+  padding: .7rem 3rem;
+  width: 100%;
+}
+.get-early-access-form > input[type="email"]{
+  padding: .7rem 0 .7rem 1rem;
+  border-radius: 50px;
+  width: 90%;
+}
+.get-early-access-form > input[type="email"]::placeholder{
+  color: rgb(229, 226, 226);
+}
+@media screen and (min-width: 68rem){
+  .get-early-access{
+    width: 60%;
+  }
+  .get-early-access-form{
+    display: flex;
+  }
+  .get-early-access-form > input{
+    margin-top: 0;
+    padding: .7rem 1rem;
+  }
+  .get-early-access-form > input[type="email"]{
+    width: 70%;
+  }
+  .get-early-access-form > input[type="submit"]{
+    margin-left: 1rem;
+    width: 40%;
+  }
+}
+/* -------------------- FOOTER -------------------- */
+.footer{
+  background-color: var(--dark-blue-footer-bg);
+}
+.footer-header > img{
+  max-width: 60%;
+}
+.footer-nav > .nav > a{
+  color: var(--white);
+  padding: .5rem 0;
+}
+.sociales{
+  justify-content: center;
+}
+.sociales > i{
+  margin-left: 1rem;
+}
+@media screen and (min-width: 38rem){
+  .footer-header > img{
+    max-width: 40%;
+  }
+}
+@media screen and (min-width: 68rem){
+  .footer-header > img{
+    max-width: 100px;
+  }
+  .footer > .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 100px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'fylo fylo fylo fylo'
+    'body body nav sociales';
+    row-gap: 1rem;
+  }
+  .footer-header{
+    grid-area: fylo;
+    margin: 0;
+  }
+  .footer-nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+  }
+  .nav{
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+  .footer-body{
+    grid-area: body;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-address{
+    grid-row: span 2;
+  }
+  .footer-email,
+  .footer-phone{
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  .sociales{
+    grid-area: sociales;
+    padding-top: 0;
+  }
+}
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  background-color: var(--dark-blue-intro-email);
+}
+.attribution > a{
+  color:rgb(184, 176, 176)
+}
